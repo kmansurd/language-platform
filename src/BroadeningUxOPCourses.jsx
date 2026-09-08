@@ -33,7 +33,7 @@ export default function BroadeningUxOPCourses() {
       key: "uxop",
       label: "UxOP",
       description:
-        "You may choose to enroll in this CLE course to substitute for Broadening credits, given that there are no required credits for Experiencing courses.",
+        "UxOP courses can be substituted for Broadening credits for admissions in 2026 or after.",
       courses: [uxopCourses.find((course) => course.code === "UTOP 2401")].filter(Boolean),
       cardClass:
         "block bg-gradient-to-b from-sky-50 to-blue-100 border border-blue-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",

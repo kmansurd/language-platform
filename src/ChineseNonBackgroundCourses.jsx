@@ -46,7 +46,7 @@ export default function ChineseNonBackgroundCourses() {
             Non-Chinese Language Background
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            You must choose one of these courses. For students admitted in 2024 and 2025 you can also take another course from this list, to substitute for CTDL or Experiencing credits.
+            You must choose one of these courses to fulfil your 3 credit Chinese requirement. After completing this, you may also take another course from this list as electives to fulfil your graduation requirement. Students admitted in 2024 or 2025 may also choose additional courses from this list to substitute for CTDL or Experiencing credits.
           </p>
         </section>
 

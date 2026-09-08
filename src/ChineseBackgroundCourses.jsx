@@ -34,7 +34,7 @@ const tabs = [
     key: "advanced",
     label: "Stronger Chinese Qualifications",
     description:
-      "For students with Level 3 or above in HKDSE Chinese, a Chinese qualification in the Mainland Gaokao (PRC) or GSAT, or equivalent (e.g. a high grade in GCE AL, IB AH, or IB AS Chinese)",
+      "You must choose one of these courses to fulfil your 3 credit Chinese requirement. After completing this, you may also take another course from this list as electives to fulfil your graduation requirement. Students admitted in 2024 or 2025 may also choose additional courses from this list to substitute for CTDL or Experiencing credits.",
     baseClass: "bg-gradient-to-b from-purple-50 to-violet-100 border-violet-200 text-violet-700",
     activeClass: "bg-gradient-to-b from-violet-200 to-purple-200 border-violet-200 text-violet-900 shadow-lg",
     cardClass: "block bg-gradient-to-b from-purple-50 to-violet-100 border border-violet-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
@@ -85,6 +85,17 @@ export default function ChineseBackgroundCourses() {
           </p>
         </section>
 
+        <section className="mb-10 flex justify-center">
+          <a
+            href="https://cle.hkust.edu.hk/courses/common-core/chinese/selection-guideline"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-b from-rose-50 to-red-100 border border-red-200 text-red-700 font-medium shadow-sm hover:shadow-md transition-all duration-300"
+          >
+            Read the course selection guidelines
+          </a>
+        </section>
+
         {/* Tab buttons — animated breathing on inactive tabs */}
         <section className="flex flex-wrap justify-center gap-6 mb-10">
           {tabs.map((tab, i) => {
@@ -93,11 +104,11 @@ export default function ChineseBackgroundCourses() {
               <div key={tab.key} className="relative">
                 {i === 0 && activeTab === null && (
                   <motion.span
-                    className="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-gray-600 shadow-sm ring-1 ring-gray-200 md:inline-flex"
-                    animate={{ x: [0, 6, 0], opacity: [0.75, 1, 0.75] }}
+                    className="pointer-events-none absolute bottom-full left-1/2 mb-2 inline-flex -translate-x-1/2 whitespace-nowrap rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-gray-600 shadow-sm ring-1 ring-gray-200"
+                    animate={{ y: [0, 6, 0], opacity: [0.75, 1, 0.75] }}
                     transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
                   >
-                    Click here 👉
+                    Click here 👇
                   </motion.span>
                 )}
                 <motion.button
@@ -130,17 +141,6 @@ export default function ChineseBackgroundCourses() {
               <p className="text-gray-500 text-base text-center">
                 {currentTab.description}
               </p>
-            </section>
-
-            <section className="flex justify-center mb-8">
-              <a
-                href="https://cle.hkust.edu.hk/courses/common-core/chinese/selection-guideline"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-b from-rose-50 to-red-100 border border-red-200 text-red-700 font-medium shadow-sm hover:shadow-md transition-all duration-300"
-              >
-                Read the Chinese course selection guideline
-              </a>
             </section>
 
             {/* Course cards — centred when only one */}

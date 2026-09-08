@@ -31,7 +31,7 @@ const tabs = [
   },
   {
     key: "putonghua",
-    label: "Putonghua",
+    label: "Putonghua for Beginners",
     description:
       "Free electives for beginners. Check each course's language background requirements and exclusions before enrolling.",
     courses: [
@@ -58,6 +58,173 @@ const tabs = [
       "bg-gradient-to-b from-emerald-50 to-green-100 border-green-200 text-emerald-700",
     tabClass: "border-green-200 bg-gradient-to-b from-emerald-50 to-green-100 text-emerald-700",
     activeTabClass: "border-green-300 bg-gradient-to-b from-green-200 to-emerald-200 text-emerald-900 shadow-lg",
+  },
+  {
+    key: "cantonese",
+    label: "Cantonese",
+    description: "Cantonese courses for Chinese and non-Chinese language background students.",
+    courses: [
+      {
+        code: "LANG 1133",
+        title: "Cantonese for Chinese Language Background Students I",
+        url: "https://cle.hkust.edu.hk/courses/lang1133",
+      },
+      {
+        code: "LANG 1130",
+        title: "Cantonese for Non-Chinese Language Background Students I",
+        url: "https://cle.hkust.edu.hk/courses/lang1130",
+      },
+    ],
+    cardClass:
+      "block bg-gradient-to-b from-cyan-50 to-teal-100 border border-teal-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
+    accent: "text-teal-700",
+    tabClass: "border-teal-200 bg-gradient-to-b from-cyan-50 to-teal-100 text-teal-700",
+    activeTabClass: "border-teal-300 bg-gradient-to-b from-teal-200 to-cyan-200 text-teal-900 shadow-lg",
+  },
+  {
+    key: "japanese",
+    label: "Japanese",
+    description: "Japanese courses for beginners.",
+    courses: [
+      ["LANG 1210", "Japanese Language and Culture for Beginners I"],
+      ["LANG 1211", "Communicative Japanese for Beginners I"],
+      ["LANG 1212", "Japanese Vocabulary and Grammar Essentials I"],
+      ["LANG 2200", "Japanese Language and Culture for Beginners II"],
+      ["LANG 2201", "Communicative Japanese for Beginners II"],
+      ["LANG 2202", "Japanese Vocabulary and Grammar Essentials II"],
+    ].map(([code, title]) => ({
+      code,
+      title,
+      url: `https://cle.hkust.edu.hk/courses/${code.replace(" ", "").toLowerCase()}`,
+    })),
+    cardClass:
+      "block bg-gradient-to-b from-rose-50 to-pink-100 border border-pink-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
+    accent: "text-pink-700",
+    tabClass: "border-pink-200 bg-gradient-to-b from-rose-50 to-pink-100 text-pink-700",
+    activeTabClass: "border-pink-300 bg-gradient-to-b from-pink-200 to-rose-200 text-pink-900 shadow-lg",
+  },
+  {
+    key: "korean",
+    label: "Korean",
+    description: "Korean courses for beginners.",
+    courses: [
+      {
+        code: "LANG 1230",
+        title: "Korean Language and Culture for Beginners I",
+        url: "https://cle.hkust.edu.hk/courses/lang1230",
+      },
+    ],
+    cardClass:
+      "block bg-gradient-to-b from-sky-50 to-blue-100 border border-blue-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
+    accent: "text-blue-700",
+    tabClass: "border-blue-200 bg-gradient-to-b from-sky-50 to-blue-100 text-blue-700",
+    activeTabClass: "border-blue-300 bg-gradient-to-b from-blue-200 to-sky-200 text-blue-900 shadow-lg",
+  },
+  {
+    key: "french",
+    label: "French",
+    description: "French courses for beginners.",
+    courses: [
+      ["LANG 1310", "French Language and Culture for Beginners I"],
+      ["LANG 2310", "French Language and Culture for Beginners II"],
+    ].map(([code, title]) => ({
+      code,
+      title,
+      url: `https://cle.hkust.edu.hk/courses/${code.replace(" ", "").toLowerCase()}`,
+    })),
+    cardClass:
+      "block bg-gradient-to-b from-violet-50 to-purple-100 border border-purple-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
+    accent: "text-purple-700",
+    tabClass: "border-purple-200 bg-gradient-to-b from-violet-50 to-purple-100 text-purple-700",
+    activeTabClass: "border-purple-300 bg-gradient-to-b from-purple-200 to-violet-200 text-purple-900 shadow-lg",
+  },
+  {
+    key: "spanish",
+    label: "Spanish",
+    description: "Spanish courses for beginners.",
+    courses: [
+      ["LANG 1330", "Spanish Language and Culture for Beginners I"],
+      ["LANG 2330", "Spanish Language and Culture for Beginners II"],
+    ].map(([code, title]) => ({
+      code,
+      title,
+      url: `https://cle.hkust.edu.hk/courses/${code.replace(" ", "").toLowerCase()}`,
+    })),
+    cardClass:
+      "block bg-gradient-to-b from-lime-50 to-yellow-100 border border-lime-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
+    accent: "text-lime-700",
+    tabClass: "border-lime-200 bg-gradient-to-b from-lime-50 to-yellow-100 text-lime-700",
+    activeTabClass: "border-lime-300 bg-gradient-to-b from-yellow-200 to-lime-200 text-lime-900 shadow-lg",
+  },
+  {
+    key: "advanced-communication",
+    label: "Advanced Communication (English)",
+    description:
+      "If you choose to take an Advanced Communication (English) course as elective to fulfil your graduation requirement, you must have already completed your required English courses.",
+    courses: [
+      ["LANG 2063", "Writing for Workplace Success"],
+      ["LANG 2064", "Speaking for Workplace Success"],
+      ["LANG 2065", "Research Writing"],
+      ["LANG 2066", "Dynamic Communication for STEAM Topics"],
+      ["LANG 2067", "Digital Communication: Expressing Your Perspective in Digital Spaces"],
+      ["LANG 2068", "Speaking with Impact"],
+      ["LANG 2069", "Supercommunication Offline and On: The Art of Connecting"],
+      ["LANG 2071", "From Proposal to Applause: Navigating the Academic Conference Journey"],
+    ].map(([code, title]) => ({
+      code,
+      title,
+      url: `https://cle.hkust.edu.hk/courses/${code.replace(" ", "").toLowerCase()}`,
+    })),
+    cardClass:
+      "block bg-gradient-to-b from-fuchsia-50 to-pink-100 border border-fuchsia-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
+    accent: "text-fuchsia-700",
+    tabClass: "border-fuchsia-200 bg-gradient-to-b from-fuchsia-50 to-pink-100 text-fuchsia-700",
+    activeTabClass: "border-fuchsia-300 bg-gradient-to-b from-pink-200 to-fuchsia-200 text-fuchsia-900 shadow-lg",
+  },
+  {
+    key: "chinese-non-background",
+    label: "Chinese for non-Chinese Language background",
+    description:
+      "These courses are for students who studied Chinese as a primary or first language (e.g. HKDSE Chinese, Gaokao Chinese, GSAT, or equivalent). If you choose to take a Chinese course as elective to fulfil your graduation requirement, you must have already completed your required Chinese course.",
+    courses: [
+      ["LANG 1511", "Below HSK 1 or equivalent"],
+      ["LANG 1512", "HSK 1 or 100 hrs prior tuition"],
+      ["LANG 1513", "HSK 2 or 150 hrs prior tuition"],
+      ["LANG 1514", "HSK 3 or 300 hrs prior tuition"],
+      ["LANG 1515", "HSK 4 or 500 hrs prior tuition"],
+    ].map(([code, title]) => ({
+      code,
+      title,
+      url: `https://cle.hkust.edu.hk/courses/${code.replace(" ", "").toLowerCase()}`,
+    })),
+    cardClass:
+      "block bg-gradient-to-b from-red-50 to-rose-100 border border-red-200 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
+    accent: "text-red-700",
+    tabClass: "border-red-200 bg-gradient-to-b from-red-50 to-rose-100 text-red-700",
+    activeTabClass: "border-red-300 bg-gradient-to-b from-rose-200 to-red-200 text-red-900 shadow-lg",
+  },
+  {
+    key: "chinese-background",
+    label: "Chinese for Chinese Language background",
+    description:
+      "These courses are for students who are learning Chinese as a foreign or second language (e.g. studied Chinese through HSK levels). If you choose to take a Chinese course as elective to fulfil your graduation requirement, you must have already completed your required Chinese course.",
+    courses: [
+      ["LANG 1421", "Chinese Communication in the Digital Era"],
+      ["LANG 1422", "Chinese for Workplace Applications"],
+      ["LANG 1423", "Chinese Communication in Global Context"],
+      ["LANG 1424", "Chinese Writing in Cultural Contexts"],
+      ["LANG 1425", "Chinese Communication in Interpersonal Relations"],
+      ["LANG 1426", "Chinese Communication in Film and Literary Contexts"],
+    ].map(([code, title]) => ({
+      code,
+      title,
+      url: `https://cle.hkust.edu.hk/courses/${code.replace(" ", "").toLowerCase()}`,
+    })),
+    cardClass:
+      "block bg-gradient-to-b from-slate-50 to-gray-200 border border-slate-300 rounded-[32px] p-8 text-left shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300",
+    accent: "text-slate-700",
+    tabClass: "border-slate-300 bg-gradient-to-b from-slate-50 to-gray-200 text-slate-700",
+    activeTabClass: "border-slate-400 bg-gradient-to-b from-gray-300 to-slate-200 text-slate-900 shadow-lg",
   },
 ];
 
@@ -111,11 +278,11 @@ export default function FYPElectives() {
               <div key={tab.key} className="relative">
                 {index === 0 && activeTab === null && (
                   <motion.span
-                    className="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-gray-600 shadow-sm ring-1 ring-gray-200 md:inline-flex"
-                    animate={{ x: [0, 6, 0], opacity: [0.75, 1, 0.75] }}
+                    className="pointer-events-none absolute bottom-full left-1/2 mb-2 inline-flex -translate-x-1/2 whitespace-nowrap rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-gray-600 shadow-sm ring-1 ring-gray-200"
+                    animate={{ y: [0, 6, 0], opacity: [0.75, 1, 0.75] }}
                     transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
                   >
-                    Click here 👉
+                    Click here 👇
                   </motion.span>
                 )}
                 <motion.button

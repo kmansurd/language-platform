@@ -21,7 +21,7 @@ const courses = [
   },
   {
     code: "LANG 1434",
-    title: "AI-Orchestrated Speaking Voice Presence and Impact",
+    title: "AI-Orchestrated Speaking: Voice, Presence, and Impact",
     url: "https://cle.hkust.edu.hk/courses/lang1434",
   },
   {
