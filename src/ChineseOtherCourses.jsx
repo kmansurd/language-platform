@@ -20,11 +20,6 @@ const options = [
     cardClass: "from-violet-50 to-purple-100 border-violet-200 text-violet-700",
   },
   {
-    label: "HAIC",
-    path: "/haic",
-    cardClass: "from-cyan-50 to-sky-100 border-cyan-200 text-cyan-700",
-  },
-  {
     label: "Electives",
     path: "/fyp",
     cardClass: "from-amber-50 to-orange-100 border-amber-200 text-amber-700",

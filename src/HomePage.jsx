@@ -33,12 +33,6 @@ export default function LanguageHomePage() {
       path: "/broadening",
     },
     {
-      title: "HAIC",
-      subtitle: "Explore Human-AI Co-Creation and Data Literacy (HAIC) courses",
-      cardClass: "from-cyan-50 to-sky-100 border-cyan-200",
-      path: "/haic",
-    },
-    {
       title: "Electives",
       subtitle: "Browse elective options and language study choices",
       cardClass: "from-amber-50 to-orange-100 border-amber-200",
