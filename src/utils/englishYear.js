@@ -8,6 +8,32 @@ export function getEnglishYear() {
   return sessionStorage.getItem(YEAR_KEY) || "";
 }
 
+const STREAMING_CRITERIA_URLS = {
+  "2023":
+    "https://cle.hkust.edu.hk/sites/default/files/E-Comm%20Streaming%20Table_2024-25_CLE.pdf",
+  "2024":
+    "https://cle.hkust.edu.hk/sites/default/files/E-Comm%20Streaming%20Table_2024-25_CLE.pdf",
+  "2025":
+    "https://cle.hkust.edu.hk/sites/default/files/Pathway%202%20Streaming%20Criteria%202025-26.pdf",
+  "2026":
+    "https://cle.hkust.edu.hk/sites/default/files/E-Comm%20Streaming%20Table.pdf",
+};
+
+export function getEnglishYearFromPath(pathname = "") {
+  const match = pathname.match(/^\/english\/(20\d{2})\//);
+  return match?.[1] ?? "";
+}
+
+export function resolveEnglishYear(pathname = "") {
+  const fromPath = getEnglishYearFromPath(pathname);
+  if (fromPath) return fromPath;
+  return getEnglishYear() || "2026";
+}
+
+export function getStreamingCriteriaUrl(year = resolveEnglishYear()) {
+  return STREAMING_CRITERIA_URLS[year] ?? STREAMING_CRITERIA_URLS["2026"];
+}
+
 export function getPathwayOrigin() {
   return sessionStorage.getItem("pathwayOrigin") || "";
 }

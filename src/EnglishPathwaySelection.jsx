@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PageNavBar from "./components/PageNavBar";
+import {
+  getStreamingCriteriaUrl,
+  resolveEnglishYear,
+} from "./utils/englishYear";
 
 
 export default function EnglishPathwaySelection() {
@@ -13,6 +17,9 @@ export default function EnglishPathwaySelection() {
         : "100%";
 
   const [exitDirection, setExitDirection] = useState("up");
+  const streamingCriteriaUrl = getStreamingCriteriaUrl(
+    resolveEnglishYear(location.pathname),
+  );
 
   useEffect(() => {
     sessionStorage.removeItem("pathwayOrigin");
@@ -50,7 +57,7 @@ export default function EnglishPathwaySelection() {
           </p>
 
           <a
-            href="https://cle.hkust.edu.hk/sites/default/files/E-Comm%20Streaming%20Table_2024-25_CLE%20Website_Updated.pdf"
+            href={streamingCriteriaUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="
